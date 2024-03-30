@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: selotapetm/polybot-k8s:0.0.1
+        image: selotapetm/polybot-k8s:0.0.2
 ---
 # k8s/service-demo.yaml
 
