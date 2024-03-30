@@ -2,7 +2,6 @@ persistence:
   enabled: true
   type: statefulset
   size: 2Gi
-  subPath: /var/lib/grafana
 admin:
   existingSecret: grafana-admin-cred
   userKey: username
