@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: omerd-bot.devops-int-college.com
+  - host: omerd-bot-k8s.devops-int-college.com
     http:
       paths:
       - path: /
