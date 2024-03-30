@@ -1,0 +1,35 @@
+# k8s/deployment-demo.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo5
+  labels:
+    app: yolo5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: yolo5
+  template:
+    metadata:
+        labels:
+          app: yolo5
+    spec:
+      containers:
+      - name: server
+        image: selotapetm/yolo5-k8s:0.0.1
+---
+# k8s/service-demo.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: yolo5-svc
+spec:
+  selector:
+    app: yolo5
+  ports:
+    - protocol: TCP
+      port: 8443
+      targetPort: 8443
