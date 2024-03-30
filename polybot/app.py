@@ -39,7 +39,7 @@ def get_secret():
 secrets = get_secret()
 TELEGRAM_TOKEN = secrets["TELEGRAM_TOKEN"]  # os.environ['TELEGRAM_TOKEN']
 
-TELEGRAM_APP_URL = secrets["TELEGRAM_APP_URL"]  # os.environ['TELEGRAM_APP_URL']
+TELEGRAM_APP_URL = secrets["TELEGRAM_APP_URL_K8S"]  # os.environ['TELEGRAM_APP_URL']
 
 
 @app.route('/', methods=['GET'])

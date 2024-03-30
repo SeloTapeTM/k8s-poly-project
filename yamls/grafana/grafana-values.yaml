@@ -1,0 +1,7 @@
+persistence:
+  enabled: true
+  size: 2Gi
+admin:
+  existingSecret: grafana-admin-cred
+  userKey: username
+  passwordKey: password
