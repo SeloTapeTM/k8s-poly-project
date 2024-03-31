@@ -1,4 +1,4 @@
-# k8s/deployment-demo.yaml
+# polybot-deployment.yaml
 
 apiVersion: apps/v1
 kind: Deployment
@@ -17,10 +17,10 @@ spec:
           app: polybot
     spec:
       containers:
-      - name: server
-        image: selotapetm/polybot-k8s:0.0.2
+      - name: polybot
+        image: selotapetm/polybot-k8s:0.0.3
 ---
-# k8s/service-demo.yaml
+# polybot-service.yaml
 
 apiVersion: v1
 kind: Service
@@ -33,3 +33,26 @@ spec:
     - protocol: TCP
       port: 8443
       targetPort: 8443
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tg-ingress
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - omerd-bot-k8s.devops-int-college.com
+    secretName: omerd-polybot-tls
+  rules:
+  - host: omerd-bot-k8s.devops-int-college.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: polybot-svc
+            port:
+              number: 8443

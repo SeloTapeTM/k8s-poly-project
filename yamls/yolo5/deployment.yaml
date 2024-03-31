@@ -1,4 +1,4 @@
-# k8s/deployment-demo.yaml
+# yolo-deployment.yaml
 
 apiVersion: apps/v1
 kind: Deployment
@@ -17,10 +17,13 @@ spec:
           app: yolo5
     spec:
       containers:
-      - name: server
-        image: selotapetm/yolo5-k8s:0.0.1
+      - name: yolo5
+        image: selotapetm/yolo5-k8s:0.0.2
+        ports:
+        - containterPort: 8080
+
 ---
-# k8s/service-demo.yaml
+# yolo-service.yaml
 
 apiVersion: v1
 kind: Service
@@ -31,5 +34,5 @@ spec:
     app: yolo5
   ports:
     - protocol: TCP
-      port: 8443
-      targetPort: 8443
+      port: 8080
+      targetPort: 8080

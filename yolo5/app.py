@@ -38,7 +38,7 @@ def get_secret():
 secrets = get_secret()
 TELEGRAM_TOKEN = secrets["TELEGRAM_TOKEN"]  # os.environ['TELEGRAM_TOKEN']
 
-TELEGRAM_APP_URL = secrets["TELEGRAM_APP_URL"]  # os.environ['TELEGRAM_APP_URL']
+TELEGRAM_APP_URL = secrets["TELEGRAM_APP_URL_K8S"]  # os.environ['TELEGRAM_APP_URL']
 
 images_bucket = 'omers3bucketpublic'
 queue_name = 'omerd-aws'
@@ -148,7 +148,7 @@ def consume():
                 # requests.get(f'http://{TELEGRAM_APP_URL}/results?predictionId={prediction_id}&chatId={chat_id}')
                 logger.info(f'before post')
                 time.sleep(2)
-                requests.get(f'https://omerd-bot.devops-int-college.com:443/results/?predictionId={prediction_id}&chatId={chat_id}')
+                requests.get(f'polybot-svc:8443/results/?predictionId={prediction_id}&chatId={chat_id}')
                 logger.info(f'after post')
 
             # Delete the message from the queue as the job is considered as DONE
