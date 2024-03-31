@@ -1,0 +1,22 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tg-ingress
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - omerd-bot-k8s.devops-int-college.com
+    secretName: omerd-polybot-tls
+  rules:
+  - host: omerd-bot-k8s.devops-int-college.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: polybot-svc
+            port:
+              number: 8443
