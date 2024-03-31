@@ -148,7 +148,7 @@ def consume():
                 # requests.get(f'http://{TELEGRAM_APP_URL}/results?predictionId={prediction_id}&chatId={chat_id}')
                 logger.info(f'before post')
                 time.sleep(2)
-                requests.get(f'polybot-svc:8443/results/?predictionId={prediction_id}&chatId={chat_id}')
+                requests.get(f'http://polybot-svc:8443/results/?predictionId={prediction_id}&chatId={chat_id}')
                 logger.info(f'after post')
 
             # Delete the message from the queue as the job is considered as DONE
