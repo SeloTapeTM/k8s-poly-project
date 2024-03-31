@@ -20,7 +20,7 @@ spec:
       - name: yolo5
         image: selotapetm/yolo5-k8s:0.0.2
         ports:
-        - containterPort: 8080
+        - containerPort: 8080
 
 ---
 # yolo-service.yaml

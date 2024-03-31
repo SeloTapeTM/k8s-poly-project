@@ -1,6 +1,5 @@
 persistence:
   enabled: true
-  type: statefulset
   size: 2Gi
 admin:
   existingSecret: grafana-admin-cred
