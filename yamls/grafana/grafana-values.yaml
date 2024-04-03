@@ -1,6 +1,6 @@
 persistence:
   enabled: true
-  size: 2Gi
+  existingClaim: ebs-claim
 admin:
   existingSecret: grafana-admin-cred
   userKey: username
