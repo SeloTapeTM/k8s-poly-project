@@ -1,6 +1,7 @@
 persistence:
   enabled: true
   existingClaim: ebs-claim
+  storageClassName: ebs-sc
 admin:
   existingSecret: grafana-admin-cred
   userKey: username
