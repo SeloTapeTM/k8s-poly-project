@@ -33,7 +33,7 @@ spec:
      name: elasticsearch-storage
    spec:
      accessModes: [ "ReadWriteOnce" ]
-     storageClassName: elastic-ebs-sc
+     storageClassName: ebs-sc
      resources:
        requests:
          storage: 5Gi
