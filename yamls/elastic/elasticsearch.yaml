@@ -33,7 +33,7 @@ spec:
      name: elasticsearch-storage
    spec:
      accessModes: [ "ReadWriteOnce" ]
-     storageClassName: ebs-sc
+     storageClassName: elastic-ebs-sc
      resources:
        requests:
          storage: 5Gi
@@ -49,3 +49,10 @@ spec:
     - name: http
       port: 9200
       targetPort: 9200
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: elastic-ebs-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
