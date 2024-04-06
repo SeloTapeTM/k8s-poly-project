@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: yolo5
-        image: selotapetm/yolo5-k8s:0.0.3
+        image: selotapetm/yolo5-k8s:0.0.4
         ports:
         - containerPort: 8080
 

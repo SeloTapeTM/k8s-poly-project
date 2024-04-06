@@ -6,6 +6,7 @@ from detect import run
 import yaml
 from loguru import logger
 import boto3
+from botocore.exceptions import ClientError
 from decimal import Decimal
 
 
