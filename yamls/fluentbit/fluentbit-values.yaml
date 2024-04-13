@@ -3,14 +3,14 @@ config:
     [OUTPUT]
         Name es
         Match kube.*
-        Host elasticsearch
+        Host elasticsearch-svc
         Logstash_Format On
         Retry_Limit False
   
     [OUTPUT]
         Name es
         Match host.*
-        Host elasticsearch
+        Host elasticsearch-svc
         Logstash_Format On
         Logstash_Prefix node
         Retry_Limit False
