@@ -45,9 +45,9 @@ config:
     [PARSER]
         Name kube-controller-logs
         Format regex
-        Regex:'^(?P<timestamp>[^ ]+) (?P<stream>stdout|stderr) (?P<logtag>[^ ]*) (?P<log_message>.*)$'
-        Time_Key: timestamp
-        Time_Format: "%Y-%m-%dT%H:%M:%S.%L%z"
+        Regex'^(?P<timestamp>[^ ]+) (?P<stream>stdout|stderr) (?P<logtag>[^ ]*) (?P<log_message>.*)$'
+        Time_Key timestamp
+        Time_Format "%Y-%m-%dT%H:%M:%S.%L%z"
         Types:
           timestamp: string
           stream: string
