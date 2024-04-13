@@ -1,15 +1,16 @@
-outputs: |
-  [OUTPUT]
-      Name es
-      Match kube.*
-      Host elasticsearch
-      Logstash_Format On
-      Retry_Limit False
-
-  [OUTPUT]
-      Name es
-      Match host.*
-      Host elasticsearch
-      Logstash_Format On
-      Logstash_Prefix node
-      Retry_Limit False
+config:
+  outputs: |
+    [OUTPUT]
+        Name es
+        Match kube.*
+        Host elasticsearch
+        Logstash_Format On
+        Retry_Limit False
+  
+    [OUTPUT]
+        Name es
+        Match host.*
+        Host elasticsearch
+        Logstash_Format On
+        Logstash_Prefix node
+        Retry_Limit False
