@@ -9,7 +9,7 @@ config:
         Suppress_Type_Name On
         #Write_Operation upsert
         #Generate_ID On
-
+        Replace_Dots On
   
     [OUTPUT]
         Name es
