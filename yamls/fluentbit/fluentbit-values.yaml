@@ -10,6 +10,7 @@ config:
         Write_Operation upsert
         Generate_ID On
         Replace_Dots On
+        Mem_Buf_Limit 512M
   
     [OUTPUT]
         Name es
@@ -22,3 +23,4 @@ config:
         Write_Operation upsert
         Generate_ID On
         Replace_Dots On
+        Mem_Buf_Limit 512M
