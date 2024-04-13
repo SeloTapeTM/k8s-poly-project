@@ -7,10 +7,10 @@ config:
         Logstash_Format On
         Retry_Limit False
         Suppress_Type_Name On
-        Write_Operation upsert
-        Generate_ID On
-        Replace_Dots On
-        Mem_Buf_Limit 512M
+        #Write_Operation upsert
+        #Generate_ID On
+        #Replace_Dots On
+        Trace_Error On
   
     [OUTPUT]
         Name es
@@ -20,7 +20,7 @@ config:
         Logstash_Prefix node
         Retry_Limit False
         Suppress_Type_Name On
-        Write_Operation upsert
-        Generate_ID On
-        Replace_Dots On
-        Mem_Buf_Limit 512M
+        #Write_Operation upsert
+        #Generate_ID On
+        #Replace_Dots On
+        Trace_Error On
