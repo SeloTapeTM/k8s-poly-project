@@ -6,6 +6,7 @@ config:
         Host elasticsearch-svc
         Logstash_Format On
         Retry_Limit False
+        Suppress_Type_Name On
   
     [OUTPUT]
         Name es
@@ -14,3 +15,4 @@ config:
         Logstash_Format On
         Logstash_Prefix node
         Retry_Limit False
+        Suppress_Type_Name On
