@@ -1,14 +1,14 @@
 outputs: |
   [OUTPUT]
       Name es
-      Match kube.*
+      Match *
       Host elasticsearch
       Logstash_Format On
       Retry_Limit False
 
   [OUTPUT]
       Name es
-      Match host.*
+      Match *
       Host elasticsearch
       Logstash_Format On
       Logstash_Prefix node
