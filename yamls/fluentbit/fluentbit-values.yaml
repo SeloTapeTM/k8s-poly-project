@@ -7,6 +7,7 @@ config:
         Logstash_Format On
         Retry_Limit False
         Suppress_Type_Name On
+        Write_Operation upsert
   
     [OUTPUT]
         Name es
@@ -16,3 +17,4 @@ config:
         Logstash_Prefix node
         Retry_Limit False
         Suppress_Type_Name On
+        Write_Operation upsert
