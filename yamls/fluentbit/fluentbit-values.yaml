@@ -8,6 +8,7 @@ config:
         Retry_Limit False
         Suppress_Type_Name On
         Write_Operation upsert
+        Generate_ID On
   
     [OUTPUT]
         Name es
@@ -18,3 +19,4 @@ config:
         Retry_Limit False
         Suppress_Type_Name On
         Write_Operation upsert
+        Generate_ID On
