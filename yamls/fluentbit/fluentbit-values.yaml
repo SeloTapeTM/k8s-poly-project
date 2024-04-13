@@ -7,8 +7,9 @@ config:
         Logstash_Format On
         Retry_Limit False
         Suppress_Type_Name On
-        Write_Operation upsert
-        Generate_ID On
+        #Write_Operation upsert
+        #Generate_ID On
+
   
     [OUTPUT]
         Name es
@@ -18,5 +19,6 @@ config:
         Logstash_Prefix node
         Retry_Limit False
         Suppress_Type_Name On
-        Write_Operation upsert
-        Generate_ID On
+        #Write_Operation upsert
+        #Generate_ID On
+        Replace_Dots On
