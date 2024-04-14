@@ -11,7 +11,6 @@ config:
         #Write_Operation upsert
         #Generate_ID On
         #Replace_Dots On
-        Trace_Error On
   
     [OUTPUT]
         Name es
@@ -24,7 +23,6 @@ config:
         #Write_Operation upsert
         #Generate_ID On
         #Replace_Dots On
-        Trace_Error On
 
   customParsers: |
     [PARSER]
