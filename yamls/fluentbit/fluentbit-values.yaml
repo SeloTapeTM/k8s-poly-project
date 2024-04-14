@@ -12,8 +12,7 @@ config:
         #Generate_ID On
         #Replace_Dots On
         Trace_Error On
-        Trace_Output On
-    
+  
     [OUTPUT]
         Name es
         Match host.*
@@ -26,7 +25,6 @@ config:
         #Generate_ID On
         #Replace_Dots On
         Trace_Error On
-        Trace_Output On
 
   customParsers: |
     [PARSER]
