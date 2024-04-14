@@ -6,7 +6,7 @@ config:
         Match kube.*
         Host elasticsearch-svc
         Logstash_Format On
-        Retry_Limit False
+        Retry_Limit 3
         Suppress_Type_Name On
         #Write_Operation upsert
         #Generate_ID On
@@ -19,7 +19,7 @@ config:
         Host elasticsearch-svc
         Logstash_Format On
         Logstash_Prefix node
-        Retry_Limit False
+        Retry_Limit 3
         Suppress_Type_Name On
         #Write_Operation upsert
         #Generate_ID On
