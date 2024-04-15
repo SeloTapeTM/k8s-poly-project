@@ -1,5 +1,17 @@
 config:
   ## https://docs.fluentbit.io/manual/pipeline/outputs
+  filters: |
+    [FILTER]
+        Name                kubernetes
+        Match               kube.*
+        Kube_URL            https://kubernetes.default.svc:443
+        Kube_CA_File        /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        Kube_Token_File     /var/run/secrets/kubernetes.io/serviceaccount/token
+        Merge_Log           On
+        Merge_Log_Key       log_processed
+        K8S-Logging.Parser  On
+        K8S-Logging.Exclude Off
+
   outputs: |
     [OUTPUT]
         Name es
@@ -8,6 +20,7 @@ config:
         Logstash_Format On
         Retry_Limit 3
         Suppress_Type_Name On
+        Index k8s-logs-${KUBERNETES_LABELS['app']}  # Using the app label
         #Write_Operation upsert
         #Generate_ID On
         #Replace_Dots On
