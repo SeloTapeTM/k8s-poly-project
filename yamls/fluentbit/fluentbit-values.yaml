@@ -10,7 +10,6 @@ config:
         Logstash_Format On
         Retry_Limit 3
         Suppress_Type_Name On
-        Index k8s-logs-${KUBERNETES_LABELS['app']}  # Using the app label
         #Write_Operation upsert
         #Generate_ID On
         #Replace_Dots On
