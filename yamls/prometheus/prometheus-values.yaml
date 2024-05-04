@@ -3,3 +3,7 @@ alertmanager:
 
 prometheus-pushgateway:
   enabled: false
+
+server:
+  persistentVolume:
+    storageClass: ebs-sc
