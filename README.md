@@ -1,7 +1,5 @@
 # Provision the Object Detection Service in Kubernetes
 
-**Note**: This project doesn't use the EC2 instances and ASG from the previous AWS project.  
-
 ## Background
 
 In this project you'll build a production-quality Kubernetes cluster by hands (!) using EC2 instances, then deploy the Object Detection Service in it, in addition to a few more observability tools.
@@ -470,5 +468,3 @@ Test it:
   2. Drain the node.
   3. Terminate the instance. 
 
-
-# Good Luck
